@@ -1,0 +1,702 @@
+<%- contentFor('page')%>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>NBR 12.721 - Quadro II</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login do site da Construtora e Incorporadora Maschio Shin">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/pages/nbr12721.css">
+    <style>
+        tbody td {
+            white-space: nowrap;
+        }
+
+        @media print {
+            @page {
+                size: landscape;
+            }
+
+            tbody td {
+                white-space: nowrap;
+            }
+
+            div .bla {
+                page-break-inside: avoid;
+                page-break-after: always;
+            }
+
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="bla" style="font-size: x-small; text-align: center">
+            <table class="table table-bordered">
+
+                <thead>
+                <tr>
+                    <td colspan="21"><strong>INFORMAÇÕES PARA ARQUIVO NO REGISTRO DE IMÓVEIS</strong>&nbsp&nbsp&nbsp&nbsp(LEI 4591 - 16/12/64 - ART.32 E NBR 12721)</td>
+                </tr>
+                <tr>
+                    <td colspan="21"><strong>QUADRO II - CÁLCULO DAS ÁREAS DAS UNIDADES AUTÔNOMAS</strong>&nbsp&nbsp&nbsp&nbsp (COLUNAS 19 A 38)</td>
+                </tr>
+                <tr>
+                    <td colspan="17" style="text-align: left"><strong>LOCAL DO IMÓVEL:</strong> <%=localProj%>
+                    <td colspan="2"><strong>FOLHA:</strong> 3/10</td>
+                    <td colspan="2"><strong>DATA:</strong> <%=dataPreench%></td>
+                </tr>
+                <tr>
+                    <td colspan="11"><strong>INCORPORADOR</strong><br><div style="text-align: left"><strong>NOME:</strong> <%=nomeInc%><br><strong>ASSINATURA:</strong><p></p></div></td>
+                    <td colspan="10"><strong>PROFISSIONAL RESPONSÁVEL PELO CÁLCULO</strong><div style="text-align: left"><strong>NOME:</strong> <%=profissionalTec%>&nbsp&nbsp&nbsp&nbsp <strong>CREA:</strong> <%=creaTec%><br><strong>ASSINATURA:</strong></div></td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><strong>UNIDADE</strong></td>
+                    <td colspan="10"><strong>ÁREAS DE DIVISÃO NÃO PROPORCIONAL</strong></td>
+                    <td rowspan="4"><strong>ÁREA TOTAL EQUIVALENTE EM ÁREA DE CUSTO PADRÃO <br>(24 + 29)</strong></td>
+                    <td rowspan="4"><strong>COEFICIENTE DE PROPOR<BR>CIONALIDADE (30/&Sigma;30)</strong></td>
+                    <td colspan="5"><strong>ÁREAS DE DIVISÃO PROPORCIONAL</strong></td>
+                    <td colspan="2" rowspan="3"><strong>ÁREA DA UNIDADE</strong></td>
+                    <td rowspan="6"><strong>QUANTIDADE (número de unidades idênticas)</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>ÁREA PRIVATIVA</strong></td>
+                    <td colspan="5"><strong>ÁREA DE USO COMUM</strong></td>
+                    <td colspan="5"><strong>ÁREA DE USO COMUM</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                    <td rowspan="2"><strong>COBERTA PADRÃO (31/&Sigma;12)</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVA<BR>LENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (20+21)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (20+22)</strong></td>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVA<BR>LENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (25+26)</strong></td>
+                    <td><strong>EQUIVA<BR>LENTE EM ÁREA DE CUSTO PADRÃO (25+27)</strong></td>
+                    <td><strong>REAL (31/&Sigma;13)</strong></td>
+                    <td><strong>EQUIVA<BR>LENTE EM ÁREA DE CUSTO PADRÃO <br>(31/&Sigma;14)</strong></td>
+                    <td><strong>REAL (32 + 33)</strong></td>
+                    <td><strong>EQUIVA<BR>LENTE EM ÁREA DE CUSTO PADRÃO (32 + 34)</strong></td>
+                    <td><strong>REAL (23+28+35)</strong></td>
+                    <td><strong>EQUIVA<BR>LENTE EM ÁREA DE CUSTO PADRÃO<br> (30 + 36)</strong></td>
+                </tr>
+                <tr>
+                    <td width="5%"><strong>19</strong></td>
+                    <td width="5%"><strong>20</strong></td>
+                    <td width="5%"><strong>21</strong></td>
+                    <td width="5%"><strong>22</strong></td>
+                    <td width="5%"><strong>23</strong></td>
+                    <td width="5%"><strong>24</strong></td>
+                    <td width="5%"><strong>25</strong></td>
+                    <td width="5%"><strong>26</strong></td>
+                    <td width="5%"><strong>27</strong></td>
+                    <td width="5%"><strong>28</strong></td>
+                    <td width="5%"><strong>29</strong></td>
+                    <td width="5%"><strong>30</strong></td>
+                    <td width="5%"><strong>31</strong></td>
+                    <td width="5%"><strong>32</strong></td>
+                    <td width="5%"><strong>33</strong></td>
+                    <td width="5%"><strong>34</strong></td>
+                    <td width="5%"><strong>35</strong></td>
+                    <td width="5%"><strong>36</strong></td>
+                    <td width="5%"><strong>37</strong></td>
+                    <td width="5%"><strong>38</strong></td>
+                </tr>
+                </thead>
+
+                <% var numberOfLines = 18
+                    var i = 1
+                    var u = 1
+
+
+                    while(i < pav.length){
+                        if(pav[i-1].unidAut == "sim"){
+                            if(u % numberOfLines == 1){%>
+
+                <tbody>
+                <%
+                var a = 0
+                var total20 = 0
+                var total21 = 0
+                var total22 = 0
+                var total25 = 0
+                var total26 = 0
+                var total27 = 0
+                var total39 = 0
+
+
+                while(a<pav.length){
+                    if(pav[a].unidAut == "sim"){
+
+                        var t20 = pav[a].nPropPrivCob*pav[a].qtdUni
+                        var t21 = pav[a].nPropPrivDif*pav[a].qtdUni
+                        var t22 = pav[a].nPropPrivDif*pav[a].coefNPropPrivDif*pav[a].qtdUni
+                        var t25 = pav[a].nPropComCob*pav[a].qtdUni
+                        var t26 = pav[a].nPropComDif*pav[a].qtdUni
+                        var t27 = pav[a].nPropComDif*pav[a].coefNPropComDif*pav[a].qtdUni
+                        var t39 = pav[a].qtdUni
+
+
+                        total20 += t20
+                        total21 += t21
+                        total22 += t22
+                        total25 += t25
+                        total26 += t26
+                        total27 += t27
+                        total39 += t39
+
+                        a++
+                    }else{
+                        a++
+                    }
+
+                }
+                    var total30 = total20+total22+total25+total27
+                    var total23 = total20+total21
+                    var total24 = total20+total22
+                    var total28 = total25+total26
+                    var total29 = total25+total27
+
+
+
+
+
+                    var s = 0
+                    var total12 = 0
+                    var total13 = 0
+                    var total14 = 0
+
+                    while(s<pav.length){
+                        var t12 = pav[s].propComCob*pav[s].qtdUni
+                        var t13 = pav[s].propComDif*pav[s].qtdUni
+                        var t14 = pav[s].propComDif*pav[s].qtdUni*pav[s].coefPropComDif
+                            total12 += t12
+                            total13 += t13
+                            total14 += t14
+                            s++
+
+                    }
+                    var total32 = total12
+                    var total33 = total13
+                    var total34 = total14
+                    var total31 = total30/total30
+                    var total35 = total32+total33
+                    var total36 = total32+total34
+                    var total37 = total23+total28+total35
+                    var total38 = total30+total36
+
+
+                col19 = pav[i-1].nomeArea
+                col20 = Number(pav[i-1].nPropPrivCob)
+                col21 = Number(pav[i-1].nPropPrivDif)
+                col22 = Number(pav[i-1].nPropPrivDif)*Number(pav[i-1].coefNPropPrivDif)
+                col23 = col20+col21
+                col24 = col20+col22
+                col25 = Number(pav[i-1].nPropComCob)
+                col26 = Number(pav[i-1].nPropComDif)
+                col27 = Number(pav[i-1].nPropComDif)*Number(pav[i-1].coefNPropComDif)
+                col28 = col25+col26
+                col29 = col25+col27
+                col30 = col24+col29
+                col31 = col30/total30
+                col32 = col31*total12
+                col33 = col31*total13
+                col34 = col31*total14
+                col35 = col32+col33
+                col36 = col32+col34
+                col37 = col23+col28+col35
+                col38 = col30+col36
+                col39 = Number(pav[i-1].qtdUni)
+
+
+
+                  %>
+                <tr>
+                    <td><%=col19%></td>
+                    <td><%=parseFloat(Math.round(col20*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col21*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col22*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col23*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col24*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col25*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col26*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col27*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col28*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col29*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col30*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col31*100000)/100000).toFixed(5).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col32*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col33*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col34*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col35*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col36*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col37*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col38*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=col39%></td>
+                </tr>
+
+
+
+                            <%}else if(u % numberOfLines != 1 && u % numberOfLines != 0){%>
+
+<%
+
+                col19m = pav[i-1].nomeArea
+                col20m = Number(pav[i-1].nPropPrivCob)
+                col21m = Number(pav[i-1].nPropPrivDif)
+                col22m = Number(pav[i-1].nPropPrivDif)*Number(pav[i-1].coefNPropPrivDif)
+                col23m = col20m+col21m
+                col24m = col20m+col22m
+                col25m = Number(pav[i-1].nPropComCob)
+                col26m = Number(pav[i-1].nPropComDif)
+                col27m = Number(pav[i-1].nPropComDif)*Number(pav[i-1].coefNPropComDif)
+                col28m = col25m+col26m
+                col29m = col25m+col27m
+                col30m = col24m+col29m
+                col31m = col30m/total30
+                col32m = col31m*total12
+                col33m = col31m*total13
+                col34m = col31m*total14
+                col35m = col32m+col33m
+                col36m = col32m+col34m
+                col37m = col23m+col28m+col35m
+                col38m = col30m+col36m
+                col39m = Number(pav[i-1].qtdUni)
+                %>
+
+                <tr>
+                    <td><%=col19m%></td>
+                    <td><%=parseFloat(Math.round(col20m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col21m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col22m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col23m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col24m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col25m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col26m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col27m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col28m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col29m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col30m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col31m*100000)/100000).toFixed(5).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col32m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col33m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col34m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col35m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col36m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col37m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col38m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=col39m%></td>
+                </tr>
+
+
+
+                            <%}else if(u % numberOfLines == 0){%>
+
+                <%
+
+
+                    col19s = pav[i-1].nomeArea
+                    col20s = Number(pav[i-1].nPropPrivCob)
+                    col21s = Number(pav[i-1].nPropPrivDif)
+                    col22s = Number(pav[i-1].nPropPrivDif)*Number(pav[i-1].coefNPropPrivDif)
+                    col23s = col20s+col21s
+                    col24s = col20s+col22s
+                    col25s = Number(pav[i-1].nPropComCob)
+                    col26s = Number(pav[i-1].nPropComDif)
+                    col27s = Number(pav[i-1].nPropComDif)*Number(pav[i-1].coefNPropComDif)
+                    col28s = col25s+col26s
+                    col29s = col25s+col27s
+                    col30s = col24s+col29s
+                    col31s = col30s/total30
+                    col32s = col31s*total12
+                    col33s = col31s*total13
+                    col34s = col31s*total14
+                    col35s = col32s+col33s
+                    col36s = col32s+col34s
+                    col37s = col23s+col28s+col35s
+                    col38s = col30s+col36s
+                    col39s = Number(pav[i-1].qtdUni)
+                %>
+
+                <tr>
+                    <td><%=col19s%></td>
+                    <td><%=parseFloat(Math.round(col20s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col21s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col22s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col23s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col24s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col25s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col26s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col27s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col28s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col29s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col30s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col31s*100000)/100000).toFixed(5).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col32s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col33s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col34s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col35s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col36s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col37s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=parseFloat(Math.round(col38s*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                    <td><%=col39s%></td>
+                </tr>
+
+                <%
+                    b = 0
+                    col20sub = 0
+                    col21sub = 0
+                    col22sub = 0
+                    col23sub = 0
+                    col24sub = 0
+                    col25sub = 0
+                    col26sub = 0
+                    col27sub = 0
+                    col28sub = 0
+                    col29sub = 0
+                    col30sub = 0
+                    col39sub = 0
+
+
+                while(b<i){
+                    if(pav[b].unidAut == "sim"){
+                    var b20 = pav[b].nPropPrivCob*pav[b].qtdUni
+                    var b21 = pav[b].nPropPrivDif*pav[b].qtdUni
+                    var b22 = pav[b].nPropPrivDif*pav[b].coefNPropPrivDif*pav[b].qtdUni
+                    var b23 = pav[b].nPropPrivCob+pav[b].nPropPrivDif*pav[b].qtdUni
+                    var b24 = pav[b].nPropPrivCob+pav[b].nPropPrivDif*pav[b].coefNPropPrivDif*pav[b].qtdUni
+                    var b25 = pav[b].nPropComCob*pav[b].qtdUni
+                    var b26 = pav[b].nPropComDif*pav[b].qtdUni
+                    var b27 = pav[b].nPropComDif*pav[b].coefNPropComDif*pav[b].qtdUni
+                    var b28 = b25+b26
+                    var b29 = b25+b27
+                    var b30 = b24+b29
+                    var b39 = pav[b].qtdUni
+
+                    col20sub += b20
+                    col21sub += b21
+                    col22sub += b22
+                    col23sub += b23
+                    col24sub += b24
+                    col25sub += b25
+                    col26sub += b26
+                    col27sub += b27
+                    col28sub += b28
+                    col29sub += b29
+                    col30sub += b30
+                    col39sub += b39
+
+                        b++
+
+                }else{
+                        b++
+                    }
+                }
+                    col31sub = col30sub/total30
+                    col32sub = col31sub*total12
+                    col33sub = col31sub*total13
+                    col34sub = col31sub*total14
+                    col35sub = col32sub+col33sub
+                    col36sub = col32sub+col34sub
+                    col37sub = col23sub+col28sub+col35sub
+                    col38sub = col30sub+col36sub
+
+
+                  %>
+
+                <tr>
+                    <td><strong>SUBTOTAL</strong></td>
+                    <td><strong><%=parseFloat(Math.round(col20sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col21sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col22sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col23sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col24sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col25sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col26sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col27sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col28sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col29sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col30sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col31sub*100000)/100000).toFixed(5).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col32sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col33sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col34sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col35sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col36sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col37sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=parseFloat(Math.round(col38sub*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                    <td><strong><%=col39sub%></strong></td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td colspan="11" align="left"><strong>ÁREA REAL GLOBAL:</strong> <%= parseFloat(Math.round(total37*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.') %> m²
+                    </td>
+                    <td colspan="10" align="left"><strong>ÁREA EQUIVALENTE
+                            GLOBAL:</strong> <%= parseFloat(Math.round(total38*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.') %> m²
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="bla" style="font-size: x-small; text-align: center">
+            <table class="table table-bordered">
+                <tbody>
+
+                <thead>
+                <tr>
+                    <td colspan="21"><strong>INFORMAÇÕES PARA ARQUIVO NO REGISTRO DE IMÓVEIS</strong>&nbsp&nbsp&nbsp&nbsp(LEI 4591 - 16/12/64 - ART.32 E NBR 12721)</td>
+                </tr>
+                <tr>
+                    <td colspan="21"><strong>QUADRO II - CÁLCULO DAS ÁREAS DAS UNIDADES AUTÔNOMAS</strong>&nbsp&nbsp&nbsp&nbsp (COLUNAS 19 A 38)</td>
+                </tr>
+                <tr>
+                    <td colspan="17" style="text-align: left"><strong>LOCAL DO IMÓVEL:</strong> <%=localProj%>
+                    <td colspan="2"><strong>FOLHA:</strong> 3/11</td>
+                    <td colspan="2"><strong>DATA:</strong> <%=dataPreench%></td>
+                </tr>
+                <tr>
+                    <td colspan="11"><strong>INCORPORADOR</strong><br><div style="text-align: left"><strong>NOME:</strong> <%=nomeInc%><br><strong>ASSINATURA:</strong><p></p></div></td>
+                    <td colspan="10"><strong>PROFISSIONAL RESPONSÁVEL PELO CÁLCULO</strong><div style="text-align: left"><strong>NOME:</strong> <%=profissionalTec%>&nbsp&nbsp&nbsp&nbsp <strong>CREA:</strong> <%=creaTec%><br><strong>ASSINATURA:</strong></div></td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><strong>UNIDADE</strong></td>
+                    <td colspan="10"><strong>ÁREAS DE DIVISÃO NÃO PROPORCIONAL</strong></td>
+                    <td rowspan="4"><strong>ÁREA TOTAL EQUIVALENTE EM ÁREA DE CUSTO PADRÃO <br>(24 + 29)</strong></td>
+                    <td rowspan="4"><strong>COEFICIENTE DE PROPOR<BR>CIONALIDADE (30/&Sigma;30)</strong></td>
+                    <td colspan="5"><strong>ÁREAS DE DIVISÃO PROPORCIONAL</strong></td>
+                    <td colspan="2" rowspan="3"><strong>ÁREA DA UNIDADE</strong></td>
+                    <td rowspan="6"><strong>QUANTIDADE (número de unidades idênticas)</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>ÁREA PRIVATIVA</strong></td>
+                    <td colspan="5"><strong>ÁREA DE USO COMUM</strong></td>
+                    <td colspan="5"><strong>ÁREA DE USO COMUM</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                    <td rowspan="2"><strong>COBERTA PADRÃO (31/&Sigma;12)</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (20+21)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (20+22)</strong></td>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (25+26)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (25+27)</strong></td>
+                    <td><strong>REAL (31/&Sigma;13)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO <br>(31/&Sigma;14)</strong></td>
+                    <td><strong>REAL (32 + 33)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (32 + 34)</strong></td>
+                    <td><strong>REAL (23+28+35)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO<br> (30 + 36)</strong></td>
+                </tr>
+                <tr>
+                    <td width="5%"><strong>19</strong></td>
+                    <td width="5%"><strong>20</strong></td>
+                    <td width="5%"><strong>21</strong></td>
+                    <td width="5%"><strong>22</strong></td>
+                    <td width="5%"><strong>23</strong></td>
+                    <td width="5%"><strong>24</strong></td>
+                    <td width="5%"><strong>25</strong></td>
+                    <td width="5%"><strong>26</strong></td>
+                    <td width="5%"><strong>27</strong></td>
+                    <td width="5%"><strong>28</strong></td>
+                    <td width="5%"><strong>29</strong></td>
+                    <td width="5%"><strong>30</strong></td>
+                    <td width="5%"><strong>31</strong></td>
+                    <td width="5%"><strong>32</strong></td>
+                    <td width="5%"><strong>33</strong></td>
+                    <td width="5%"><strong>34</strong></td>
+                    <td width="5%"><strong>35</strong></td>
+                    <td width="5%"><strong>36</strong></td>
+                    <td width="5%"><strong>37</strong></td>
+                    <td width="5%"><strong>38</strong></td>
+                </tr>
+                </thead>
+
+
+                            <%}
+                            i++
+                            u++
+
+                        }else{
+                            i++
+                        }
+                    }
+
+                 %>
+
+                            <%
+
+
+
+                            if(pav[i-1].unidAut == "sim"){
+
+                            col19ult = pav[i-1].nomeArea
+                            col20ult = Number(pav[i-1].nPropPrivCob)
+                            col21ult = Number(pav[i-1].nPropPrivDif)
+                            col22ult = Number(pav[i-1].nPropPrivDif)*Number(pav[i-1].coefNPropPrivDif)
+                            col23ult = col20ult+col21ult
+                            col24ult = col20ult+col22ult
+                            col25ult = Number(pav[i-1].nPropComCob)
+                            col26ult = Number(pav[i-1].nPropComDif)
+                            col27ult = Number(pav[i-1].nPropComDif)*Number(pav[i-1].coefNPropComDif)
+                            col28ult = col25ult+col26ult
+                            col29ult = col25ult+col27ult
+                            col30ult = col24ult+col29ult
+                            col31ult = col30ult/total30
+                            col32ult = col31ult*total12
+                            col33ult = col31ult*total13
+                            col34ult = col31ult*total14
+                            col35ult = col32ult+col33ult
+                            col36ult = col32ult+col34ult
+                            col37ult = col23ult+col28ult+col35ult
+                            col38ult = col30ult+col36ult
+                            col39ult = Number(pav[i-1].qtdUni)
+                            %>
+
+                            <tr>
+                                <td><%=col19ult%></td>
+                                <td><%=parseFloat(Math.round(col20ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col21ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col22ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col23ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col24ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col25ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col26ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col27ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col28ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col29ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col30ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col31ult*100000)/100000).toFixed(5).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col32ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col33ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col34ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col35ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col36ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col37ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=parseFloat(Math.round(col38ult*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></td>
+                                <td><%=col39ult%></td>
+                            </tr>
+
+                            <%}%>
+
+                            <tr>
+                                <td><strong>TOTAIS</strong></td>
+                                <td><strong><%=parseFloat(Math.round(total20*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total21*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total22*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total23*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total24*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total25*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total26*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total27*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total28*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total29*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total30*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total31*100000)/100000).toFixed(5).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total32*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total33*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total34*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total35*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total36*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total37*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=parseFloat(Math.round(total38*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')%></strong></td>
+                                <td><strong><%=total39%></strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="11" align="left"><strong>ÁREA REAL GLOBAL:</strong> <%= parseFloat(Math.round(total37*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.') %> m²
+                                </td>
+                                <td colspan="10" align="left"><strong>ÁREA EQUIVALENTE
+                                        GLOBAL:</strong> <%= parseFloat(Math.round(total38*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.') %> m²
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

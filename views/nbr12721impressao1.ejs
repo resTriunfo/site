@@ -1,0 +1,584 @@
+<%- contentFor('page')%>
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+    <title>NBR 12.721 - Quadro I</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login do site da Construtora e Incorporadora Maschio Shin">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/pages/nbr12721.css">
+    <style>
+        tbody td {
+            white-space: nowrap;
+        }
+
+        @media print {
+            @page {
+                size: landscape;
+            }
+
+            tbody td {
+                white-space: nowrap;
+            }
+
+            div .bla {
+                page-break-inside: avoid;
+                page-break-after: always;
+            }
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="bla" style="font-size: x-small; text-align: center">
+            <table class="table table-bordered">
+                <%
+                var numberOfLines = 14
+                var i = 1
+
+                        while(i < pavTotal.length){
+                if(i % numberOfLines == 1){ %>
+                <thead class="head-fixo">
+                <tr>
+                    <td colspan="19"><strong>INFORMAÇÕES PARA ARQUIVO NO REGISTRO DE IMÓVEIS</strong>&nbsp&nbsp&nbsp&nbsp(LEI
+                        4591 - 16/12/64 - ART.32 E NBR 12721)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="19"><strong>QUADRO I - CÁLCULO DAS ÁREAS NOS PAVIMENTOS E DAS ÁREAS GLOBAIS</strong>&nbsp&nbsp&nbsp&nbsp
+                        (COLUNAS 1 A 18)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="15" style="text-align: left"><strong>LOCAL DO IMÓVEL:</strong> <%= localProj %>
+                    <td colspan="2"><strong>FOLHA:</strong> 2/10</td>
+                    <td colspan="2"><strong>DATA:</strong> <%= dataPreench %></td>
+                </tr>
+                <tr>
+                    <td colspan="10"><strong>INCORPORADOR</strong><br>
+
+                        <div style="text-align: left"><strong>NOME:</strong> <%= nomeInc %>
+                            <br><strong>ASSINATURA:</strong>
+
+                            <p></p></div>
+                    </td>
+                    <td colspan="9"><strong>PROFISSIONAL RESPONSÁVEL PELO CÁLCULO</strong>
+
+                        <div style="text-align: left"><strong>NOME:</strong> <%= profissionalTec %>&nbsp&nbsp&nbsp&nbsp
+                            <strong>CREA:</strong> <%= creaTec %><br><strong>ASSINATURA:</strong></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><strong>PAVIMENTO</strong></td>
+                    <td colspan="10"><strong>ÁREAS DE DIVISÃO NÃO PROPORCIONAL</strong></td>
+                    <td colspan="5"><strong>ÁREAS DE DIVISÃO PROPORCIONAL</strong></td>
+                    <td colspan="2" rowspan="3"><strong>ÁREA DO PAVIMENTO</strong></td>
+                    <td rowspan="6"><strong>QUANTIDADE (número de pavimentos idênticos)</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>ÁREA PRIVATIVA</strong></td>
+                    <td colspan="5"><strong>ÁREA DE USO COMUM</strong></td>
+                    <td colspan="5"><strong>ÁREA DE USO COMUM</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                    <td rowspan="2"><strong>COBERTA PADRÃO</strong></td>
+                    <td colspan="2"><strong>COBERTA DE PADRÃO DIFERENTE OU DESCOBERTA</strong></td>
+                    <td colspan="2"><strong>TOTAIS</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (2+3)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (2+4)</strong></td>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (7+8)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (7+9)</strong></td>
+                    <td><strong>REAL</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO</strong></td>
+                    <td><strong>REAL (12+13)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (12+14)</strong></td>
+                    <td><strong>REAL (5+10+15)</strong></td>
+                    <td><strong>EQUIVALENTE EM ÁREA DE CUSTO PADRÃO (6+11+16)</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td><strong>2</strong></td>
+                    <td><strong>3</strong></td>
+                    <td><strong>4</strong></td>
+                    <td><strong>5</strong></td>
+                    <td><strong>6</strong></td>
+                    <td><strong>7</strong></td>
+                    <td><strong>8</strong></td>
+                    <td><strong>9</strong></td>
+                    <td><strong>10</strong></td>
+                    <td><strong>11</strong></td>
+                    <td><strong>12</strong></td>
+                    <td><strong>13</strong></td>
+                    <td><strong>14</strong></td>
+                    <td><strong>15</strong></td>
+                    <td><strong>16</strong></td>
+                    <td><strong>17</strong></td>
+                    <td><strong>18</strong></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong><%= pavTotal[i - 1].pavimento %></strong></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.') %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col4 = pavTotal[i - 1].nPropPrivEquiv %>
+                        <%= parseFloat(Math.round(col4*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col5 = pavTotal[i - 1].nPropPrivCob + pavTotal[i - 1].nPropPrivDif %>
+                        <%= parseFloat(Math.round(col5*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.') %></td>
+                    <td>
+                        <% var col6 = pavTotal[i - 1].nPropPrivCob + col4 %>
+                        <%= parseFloat(Math.round(col6*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col9 = pavTotal[i - 1].nPropComEquiv %>
+                        <%= parseFloat(Math.round(col9*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col10 = pavTotal[i - 1].nPropComCob + pavTotal[i - 1].nPropComDif %>
+                        <%= parseFloat(Math.round(col10*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col11 = pavTotal[i - 1].nPropComCob + col9 %>
+                        <%= parseFloat(Math.round(col11*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col14 = pavTotal[i - 1].propComEquiv %>
+                        <%= parseFloat(Math.round(col14*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col15 = pavTotal[i - 1].propComCob + pavTotal[i - 1].propComDif %>
+                        <%= parseFloat(Math.round(col15*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col16 = pavTotal[i - 1].propComCob + col14 %>
+                        <%= parseFloat(Math.round(col16*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col17 = col5 + col10 + col15 %>
+                        <%= parseFloat(Math.round(col17*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col18 = col6 + col11 + col16 %>
+                        <%= parseFloat(Math.round(col18*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= pavTotal[i - 1].qtdPav %></td>
+                </tr>
+
+                <% }else if(i % numberOfLines != 1 && i % numberOfLines != 0){ %>
+
+                <tr>
+                    <td><strong><%= pavTotal[i - 1].pavimento %></strong></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col4m = pavTotal[i - 1].nPropPrivEquiv %>
+                        <%= parseFloat(Math.round(col4m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col5m = pavTotal[i - 1].nPropPrivCob + pavTotal[i - 1].nPropPrivDif %>
+                        <%= parseFloat(Math.round(col5m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col6m = pavTotal[i - 1].nPropPrivCob + col4m %>
+                        <%= parseFloat(Math.round(col6m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col9m = pavTotal[i - 1].nPropComEquiv %>
+                        <%= parseFloat(Math.round(col9m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col10m = pavTotal[i - 1].nPropComCob + pavTotal[i - 1].nPropComDif %>
+                        <%= parseFloat(Math.round(col10m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col11m = pavTotal[i - 1].nPropComCob + col9m %>
+                        <%= parseFloat(Math.round(col11m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col14m = pavTotal[i - 1].propComEquiv %>
+                        <%= parseFloat(Math.round(col14m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col15m = pavTotal[i - 1].propComCob + pavTotal[i - 1].propComDif %>
+                        <%= parseFloat(Math.round(col15m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col16m = pavTotal[i - 1].propComCob + col14m %>
+                        <%= parseFloat(Math.round(col16m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col17m = col5m + col10m + col15m %>
+                        <%= parseFloat(Math.round(col17m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col18m = col6m + col11m + col16m %>
+                        <%= parseFloat(Math.round(col18m*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= pavTotal[i - 1].qtdPav %></td>
+                </tr>
+
+                <% }else if(i % numberOfLines == 0){ %>
+                <tr>
+                    <td><strong><%= pavTotal[i - 1].pavimento %></strong></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col4f = pavTotal[i - 1].nPropPrivEquiv %>
+                        <%= parseFloat(Math.round(col4f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col5f = pavTotal[i - 1].nPropPrivCob + pavTotal[i - 1].nPropPrivDif %>
+                        <%= parseFloat(Math.round(col5f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col6f = pavTotal[i - 1].nPropPrivCob + col4f %>
+                        <%= parseFloat(Math.round(col6f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col9f = pavTotal[i - 1].nPropComEquiv %>
+                        <%= parseFloat(Math.round(col9f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col10f = pavTotal[i - 1].nPropComCob + pavTotal[i - 1].nPropComDif %>
+                        <%= parseFloat(Math.round(col10f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col11f = pavTotal[i - 1].nPropComCob + col9f %>
+                        <%= parseFloat(Math.round(col11f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col14f = pavTotal[i - 1].propComEquiv %>
+                        <%= parseFloat(Math.round(col14f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col15f = pavTotal[i - 1].propComCob + pavTotal[i - 1].propComDif %>
+                        <%= parseFloat(Math.round(col15f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col16f = pavTotal[i - 1].propComCob + col14f %>
+                        <%= parseFloat(Math.round(col16f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col17f = col5f + col10f + col15f %>
+                        <%= parseFloat(Math.round(col17f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col18f = col6f + col11f + col16f %>
+                        <%= parseFloat(Math.round(col18f*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= pavTotal[i - 1].qtdPav %></td>
+                </tr>
+                <%
+                            c2 = 0,
+                            c3 = 0,
+                            c4 = 0,
+                            c7 = 0,
+                            c8 = 0,
+                            c9 = 0,
+                            c12 = 0,
+                            c13 = 0,
+                            c14 = 0,
+                            c19 = 0
+
+                    for (var b = 0; b < i; b++) {
+                        var q0 = pavTotal[b].nPropPrivCob * pavTotal[b].qtdPav
+                        var q1 = pavTotal[b].nPropPrivDif * pavTotal[b].qtdPav
+                        var q2 = pavTotal[b].nPropPrivEquiv * pavTotal[b].qtdPav
+                        var q3 = pavTotal[b].nPropComCob * pavTotal[b].qtdPav
+                        var q4 = pavTotal[b].nPropComDif * pavTotal[b].qtdPav
+                        var q5 = pavTotal[b].nPropComEquiv * pavTotal[b].qtdPav
+                        var q6 = pavTotal[b].propComCob * pavTotal[b].qtdPav
+                        var q7 = pavTotal[b].propComDif * pavTotal[b].qtdPav
+                        var q8 = pavTotal[b].propComEquiv * pavTotal[b].qtdPav
+
+                        c2 += q0
+                        c3 += q1
+                        c4 += q2
+                        c7 += q3
+                        c8 += q4
+                        c9 += q5
+                        c12 += q6
+                        c13 += q7
+                        c14 += q8
+                        c19 += pavTotal[b].qtdPav
+
+                    }
+                %>
+
+                <tr>
+
+                    <td><strong>SUBTOTAL</strong></td>
+                    <td><strong><%= parseFloat(Math.round(c2*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c3*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c4*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c5 = c2 + c3 %>
+                            <%= parseFloat(Math.round(c5*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c6 = c2 + c4 %>
+                            <%= parseFloat(Math.round(c6*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c7*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c8*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c9*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c10 = c7 + c8 %>
+                            <%= parseFloat(Math.round(c10*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c11 = c7 + c9 %>
+                            <%= parseFloat(Math.round(c11*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c12*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c13*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(c14*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c15 = c12 + c13 %>
+                            <%= parseFloat(Math.round(c15*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c16 = c12 + c14 %>
+                            <%= parseFloat(Math.round(c16*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c17 = c5 + c10 + c15 %>
+                            <%= parseFloat(Math.round(c17*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <% var c18 = c6 + c11 + c16 %>
+                            <%= parseFloat(Math.round(c18*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= c19 %></strong></td>
+
+                    <%
+
+                                totals2 = 0,
+                                totals3 = 0,
+                                totals4 = 0,
+                                totals7 = 0,
+                                totals8 = 0,
+                                totals9 = 0,
+                                totals12 = 0,
+                                totals13 = 0,
+                                totals14 = 0,
+                                totals19 = 0
+
+
+
+                        for(var d = 0; d < pavTotal.length; d++) {
+                            var ts0 = pavTotal[d].nPropPrivCob * pavTotal[d].qtdPav
+                            var ts1 = pavTotal[d].nPropPrivDif * pavTotal[d].qtdPav
+                            var ts2 = pavTotal[d].nPropPrivEquiv * pavTotal[d].qtdPav
+                            var ts3 = pavTotal[d].nPropComCob * pavTotal[d].qtdPav
+                            var ts4 = pavTotal[d].nPropComDif * pavTotal[d].qtdPav
+                            var ts5 = pavTotal[d].nPropComEquiv * pavTotal[d].qtdPav
+                            var ts6 = pavTotal[d].propComCob * pavTotal[d].qtdPav
+                            var ts7 = pavTotal[d].propComDif * pavTotal[d].qtdPav
+                            var ts8 = pavTotal[d].propComEquiv * pavTotal[d].qtdPav
+
+                            totals2 += ts0
+                            totals3 += ts1
+                            totals4 += ts2
+                            totals7 += ts3
+                            totals8 += ts4
+                            totals9 += ts5
+                            totals12 += ts6
+                            totals13 += ts7
+                            totals14 += ts8
+                            totals19 += pavTotal[d].qtdPav
+
+                        }
+                    %>
+                    <%
+                        var totals5 = totals2 + totals3
+                        var totals6 = totals2 + totals4
+                        var totals10 = totals7 + totals8
+                        var totals11 = totals7 + totals9
+                        var totals15 = totals12 + totals13
+                        var totals16 = totals12 + totals14
+                        var totals17 = totals5 + totals10 + totals15
+                        var totals18 = totals6 + totals11 + totals16
+                    %>
+
+                </tr>
+                <tr>
+                    <td colspan="10" align="left"><strong>ÁREA REAL GLOBAL:</strong> <%= parseFloat(Math.round(totals17*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %> m²
+                    </td>
+                    <td colspan="9" align="left"><strong>ÁREA EQUIVALENTE
+                            GLOBAL:</strong> <%= parseFloat(Math.round(totals18*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %> m²
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="bla" style="font-size: x-small; text-align: center">
+            <table class="table table-bordered">
+                <tbody>
+
+                <% }
+                    i++
+                } %>
+
+                    <%
+
+                total2 = 0,
+                total3 = 0,
+                total4 = 0,
+                total7 = 0,
+                total8 = 0,
+                total9 = 0,
+                total12 = 0,
+                total13 = 0,
+                total14 = 0,
+                total19 = 0
+
+
+
+                for(var c = 0; c < i; c++) {
+                    var t0 = pavTotal[c].nPropPrivCob * pavTotal[c].qtdPav
+                    var t1 = pavTotal[c].nPropPrivDif * pavTotal[c].qtdPav
+                    var t2 = pavTotal[c].nPropPrivEquiv * pavTotal[c].qtdPav
+                    var t3 = pavTotal[c].nPropComCob * pavTotal[c].qtdPav
+                    var t4 = pavTotal[c].nPropComDif * pavTotal[c].qtdPav
+                    var t5 = pavTotal[c].nPropComEquiv * pavTotal[c].qtdPav
+                    var t6 = pavTotal[c].propComCob * pavTotal[c].qtdPav
+                    var t7 = pavTotal[c].propComDif * pavTotal[c].qtdPav
+                    var t8 = pavTotal[c].propComEquiv * pavTotal[c].qtdPav
+
+                    total2 += t0
+                    total3 += t1
+                    total4 += t2
+                    total7 += t3
+                    total8 += t4
+                    total9 += t5
+                    total12 += t6
+                    total13 += t7
+                    total14 += t8
+                    total19 += pavTotal[c].qtdPav
+
+                }
+                %>
+                <%
+                    var total5 = total2 + total3
+                    var total6 = total2 + total4
+                    var total10 = total7 + total8
+                    var total11 = total7 + total9
+                    var total15 = total12 + total13
+                    var total16 = total12 + total14
+                    var total17 = total5 + total10 + total15
+                    var total18 = total6 + total11 + total16
+
+                  %>
+                <tr>
+                    <td><strong><%= pavTotal[i - 1].pavimento %></strong></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropPrivDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col4u = pavTotal[i - 1].nPropPrivEquiv %>
+                        <%= parseFloat(Math.round(col4u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col5u = pavTotal[i - 1].nPropPrivCob+pavTotal[i-1].nPropPrivDif %>
+                        <%= parseFloat(Math.round(col5u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col6u = pavTotal[i - 1].nPropPrivCob+pavTotal[i-1].nPropPrivEquiv %>
+                        <%= parseFloat(Math.round(col6u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].nPropComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col9u = pavTotal[i - 1].nPropComEquiv %>
+                        <%= parseFloat(Math.round(col9u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col10u = pavTotal[i - 1].nPropComCob+pavTotal[i-1].nPropComDif %>
+                        <%= parseFloat(Math.round(col10u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col11u = pavTotal[i - 1].nPropComCob+pavTotal[i-1].nPropComEquiv %>
+                        <%= parseFloat(Math.round(col11u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComCob*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= parseFloat(Math.round(pavTotal[i-1].propComDif*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col14u = pavTotal[i - 1].propComEquiv %>
+                        <%= parseFloat(Math.round(col14u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col15u = pavTotal[i - 1].propComCob+pavTotal[i-1].propComDif %>
+                        <%= parseFloat(Math.round(col15u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <% var col16u = pavTotal[i - 1].propComCob+pavTotal[i-1].propComEquiv %>
+                        <%= parseFloat(Math.round(col16u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <%var col17u = col5u+col10u+col15u%>
+                        <%= parseFloat(Math.round(col17u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td>
+                        <%var col18u = col6u+col11u+col16u%>
+                        <%= parseFloat(Math.round(col18u*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></td>
+                    <td><%= pavTotal[i - 1].qtdPav %></td>
+                </tr>
+
+                <tr>
+                    <td><strong>TOTAIS</strong></td>
+                    <td><strong><%= parseFloat(Math.round(total2*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total3*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total4*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total5*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total6*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total7*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total8*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total9*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total10*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total11*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total12*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total13*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= parseFloat(Math.round(total14*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total15*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total16*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total17*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong>
+                            <%= parseFloat(Math.round(total18*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %></strong></td>
+                    <td><strong><%= total19 %></strong></td>
+                </tr>
+
+
+                </tbody>
+                <tr>
+                    <td colspan="10" align="left"><strong>ÁREA REAL GLOBAL:</strong> <%= parseFloat(Math.round(total17*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %> m²
+                    </td>
+                    <td colspan="9" align="left"><strong>ÁREA EQUIVALENTE
+                            GLOBAL:</strong> <%= parseFloat(Math.round(total18*100)/100).toFixed(2).replace(',', '#').replace('.', ',').replace('#', '.')  %> m²
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

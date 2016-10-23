@@ -1,0 +1,58 @@
+<%- contentFor('css') %>
+    <link rel="stylesheet" href="stylesheets/pages/page_login.css">
+
+<%- contentFor('breadcrumbs') %>
+            <h1 class="pull-left">Login</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/index">Home</a></li>
+
+                <li class="active">Login</li>
+            </ul>
+
+<%- contentFor('contentpart') %>
+
+<div class="tab-pane fade in active" id="alert-1">
+    <div class="margin-bottom-15"></div>
+    <div class="" id="message"><%= message %></div>
+</div>
+
+<!--=== Content Part ===-->
+<div class="container content">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <form class="reg-page" action="/login" method="post">
+                <div class="reg-header">
+                    <h2>Entre em sua conta</h2>
+                </div>
+
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" placeholder="Login" class="form-control" name="username">
+                </div>
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" placeholder="Senha" class="form-control" name="password">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 checkbox">
+                        <label><input type="checkbox"> Mantenha-me conectado</label>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn-u pull-right" type="submit">Login</button>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h4>Esqueceu sua senha ?</h4>
+
+                <p>Não se preocupe, <a class="color-green" href="#">clique aqui</a> para criar uma nova senha.</p>
+            </form>
+        </div>
+    </div>
+    <!--/row-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+<%- contentFor('javascript') %>

@@ -1,0 +1,76 @@
+<%- contentFor('css') %>
+<link rel="stylesheet" href="/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css">
+
+<%- contentFor('breadcrumbs') %>
+
+<h1 class="pull-left">Área Restrita</h1>
+<ul class="pull-right breadcrumb">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/restritoadm">Área Restrita</a></li>
+    <li class="active">Ferramentas</li>
+</ul>
+
+<%- contentFor('contentpart') %>
+
+<div class="col-md-9">
+    <div class="tab-pane fade in active" id="alert-1">
+        <div class="" id="message"><%=message%></div>
+    </div>
+
+    <form name="formulario" id="formulario" action="/calculodoc" class="sky-form" method="post" enctype="application/json">
+
+        <fieldset>
+            <header>DADOS DO IMÓVEL:</header>
+            <section>
+                <label class="label">Município:</label>
+                <label class="select">
+                    <select name="municipio" id="municipio">
+                        <option value="guarulhos">Guarulhos</option>
+                        <option value="cotia">Cotia</option>
+                    </select>
+                    <i></i>
+                </label>
+            </section>
+            <section>
+                <label class="label">Origem dos recursos do financiamento:</label>
+                <input type="radio" name="origem" value="fgts" checked>FGTS  <input type="radio" name="origem" value="poupanca">Poupança
+            </section>
+            <section>
+                <label class="label">1⁰ Imóvel:</label><input type="radio" name="primeiroImovel" value="true" checked>sim <input type="radio" name="primeiroImovel" value="false">não
+            </section>
+            <section>
+                <label class="label">Imóvel na Planta:</label><input type="radio" name="planta" value="true" checked>sim <input type="radio" name="planta" value="false">não
+            </section>
+
+            <section>
+                <label class="label">Valor da Entrada:</label>
+                <label class="input">
+                    <input class="input" type="Number" name="valorEntrada" required>
+                    <i></i>
+                </label>
+            </section>
+            <section>
+                <label class="label">Valor Financiado:</label>
+                <label class="input">
+                    <input class="input" type="number" name="valorFinanciado" required>
+                    <i></i>
+                </label>
+            </section>
+            <section>
+                <label class="label">Valor da Fração Ideal do Terreno (apenas imóvel na planta):</label>
+                <label class="input">
+                    <input class="input" type="Number" name="fite">
+                    <i></i>
+                </label>
+            </section>
+        </fieldset>
+        <footer>
+            <button type="submit" class="btn-u">Calcular</button>
+            <a href="/restritoferramentas"><button type="button" class="btn-u btn-u-default">Voltar</button></a>
+        </footer>
+    </form>
+</div>
+
+
+<%- contentFor('javascript') %>
+

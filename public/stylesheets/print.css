@@ -1,0 +1,45 @@
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 0.0cm;
+
+    }
+
+    .header {
+        display: none;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    .col-md-3 {
+        display: none;
+    }
+
+    .tab-pane {
+        display: none;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .footer-v1 {
+        display: none;
+    }
+
+    #inputs {
+        display: none;
+    }
+
+    .panel-blue {
+        width: 100%;
+        margin: 0;
+        float: none;
+        color: #000;
+        border: none;
+        white-space: nowrap
+    }
+
+}

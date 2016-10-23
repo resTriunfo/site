@@ -1,0 +1,515 @@
+<%- contentFor('page')%>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>NBR 12.721 - Formulários</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login do site da Construtora e Incorporadora Maschio Shin">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/pages/nbr12721.css">
+    <link rel="stylesheet" href="/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="/stylesheets/theme-colors/blue.css">
+    <style>
+        input.input {
+            width: 70px;
+        }
+        input#small {
+            width: 40px;
+
+
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <!-- Topbar Navigation -->
+                <ul class="loginbar pull-right">
+                    <li>
+                        <i class="fa fa-globe"></i>
+                        <a>Idiomas</a>
+                        <ul class="Idiomas">
+                            <li class="active">
+                                <a href="#">Português <i class="fa fa-check"></i></a>
+                            </li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Español</a></li>
+                            <!--<li><a href="#">German</a></li>-->
+                        </ul>
+                    </li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="/faq">Ajuda</a></li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+                <!-- End Topbar Navigation -->
+            </div>
+        </div>
+        <!-- End Topbar -->
+
+        <!-- Navbar -->
+        <div class="navbar navbar-default mega-menu" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index">
+                        <img id="logo-header" src="/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Home -->
+                        <li class="">
+                            <a href="/index" class="" data-toggle="">
+                                Home
+                            </a>
+
+                        </li>
+                        <!-- End Home -->
+
+                        <!-- Empreendimentos -->
+                        <li class="">
+                            <a href="/empreendimentos" class="" data-toggle="">
+                                Empreendimentos
+                            </a>
+
+                        </li>
+                        <!-- Empreendimentos -->
+
+
+                        <!-- Contato -->
+                        <li class="">
+                            <a href="/contato" class="" data-toggle="">
+                                Contato
+                            </a>
+
+                        </li>
+                        <!-- End Contato -->
+                        <!-- Search Block -->
+                        <li>
+                            <i class="search fa fa-search search-btn"></i>
+                            <div class="search-open">
+                                <div class="input-group animated fadeInDown">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn-u" type="button">Go</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- End Search Block -->
+
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>
+        </div>
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header ===-->
+
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Formulário NBR 12.721</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/restritoadm">Área Restrita</a></li>
+                <li><a href="/restritoferramentas">Ferramentas</a></li>
+                <li><a href="/nbr12721tela">NBR 12.721</a></li>
+                <li class="active">Formulário NBR 12.721</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+    <div class="tab-pane fade in active" id="alert-1">
+        <div class="margin-bottom-15"></div>
+        <div class="" id="message"><%=message%></div>
+    </div>
+
+
+    <div class="container content">
+        <form name="editformulario" id="editformulario" action="/editformulario/<%=idObra%>" class="sky-form" method="post">
+            <fieldset>
+                <header>DATA DO PREENCHIMENTO:</header>
+                <section>
+                    <label class="label">Data:</label>
+                    <label class="input">
+                        <input type="text" name="dataPreench" id="dataPreench" value="<%=dataPreench%>">
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <header>DADOS DO INCORPORADOR E PROPRIETÁRIO</header>
+                <section>
+                    <label class="label">Nome:</label>
+                    <label class="input">
+                        <input type="text" name="nomeInc" id="nomeInc" value="<%=nomeInc%>">
+                    </label>
+
+                    <label class="label">CNPJ:</label>
+                    <label class="input">
+                        <input type="text" name="cnpjInc" id="cnpjInc" value="<%=cnpjInc%>">
+                    </label>
+
+                    <label class="label">CPF:</label>
+                    <label class="input">
+                        <input type="text" name="cpfInc" id="cpfInc" value="<%=cpfInc%>">
+                    </label>
+
+                    <label class="label">Endereço:</label>
+                    <label class="input">
+                        <input type="text" name="enderecoInc" id="enderecoInc" value="<%=enderecoInc%>">
+                    </label>
+                </section>
+            </fieldset>
+
+            <fieldset>
+                <header>RESPONSABILIDADE TÉCNICA PELAS INFORMAÇÕES E CÁLCULOS</header>
+                <section>
+                    <label class="label">Profissional Responsável Técnico:</label>
+                    <label class="input">
+                        <input type="text" name="profissionalTec" id="profissionalTec" value="<%=profissionalTec%>">
+                    </label>
+
+                    <label class="label">Número de Registro do Profissional no CREA:</label>
+                    <label class="input">
+                        <input type="text" name="creaTec" id="creaTec" value="<%=creaTec%>">
+                    </label>
+
+                    <label class="label">Anotação de Responsabilidade Técnica (ART):</label>
+                    <label class="input">
+                        <input type="text" name="artTec" id="artTec" value="<%=artTec%>">
+                    </label>
+
+                    <label class="label">Endereço:</label>
+                    <label class="input">
+                        <input type="text" name="enderecoTec" id="enderecoTec" value="<%=enderecoTec%>">
+                    </label>
+                </section>
+            </fieldset>
+
+            <fieldset>
+                <header>DADOS DO PROJETO</header>
+                <section>
+                    <label class="label">Nome do Edifício:</label>
+                    <label class="input">
+                        <input type="text" name="nomeProj" id="nomeProj" value="<%=nomeProj%>">
+                    </label>
+
+                    <label class="label">Local da Construção:</label>
+                    <label class="input">
+                        <input type="text" name="localProj" id="localProj" value="<%=localProj%>">
+                    </label>
+
+                    <label class="label">Cidade/UF:</label>
+                    <label class="input">
+                        <input type="text" name="cidadeProj" id="cidadeProj" value="<%=cidadeProj%>">
+                    </label>
+                    <%
+                        var R1B = ""
+                        var R1N = ""
+                        var R1A = ""
+                        var PP4B = ""
+                        var PP4N = ""
+                        var R8B = ""
+                        var R8N = ""
+                        var R8A = ""
+                        var R16N = ""
+                        var R16A = ""
+                        var PIS = ""
+                        var RPQ1 = ""
+                        var CAL8N = ""
+                        var CAL8A = ""
+                        var CSL8N = ""
+                        var CSL8A = ""
+                        var CSL16N = ""
+                        var CSL16A = ""
+                        var GI = ""
+                    if(designacaoProj == "R1-B"){
+                        R1B = "selected"
+                    }else if(designacaoProj == "R1-N"){
+                        R1N = "selected"
+                    }else if(designacaoProj == "R1-A"){
+                        R1A = "selected"
+                    }else if(designacaoProj == "PP4-B"){
+                        PP4B = "selected"
+                    }else if(designacaoProj == "PP4-N"){
+                        PP4N = "selected"
+                    }else if(designacaoProj == "R8-B"){
+                        R8B = "selected"
+                    }else if(designacaoProj == "R8-N"){
+                        R8N = "selected"
+                    }else if(designacaoProj == "R8-A"){
+                        R8A = "selected"
+                    }else if(designacaoProj == "R16-N"){
+                        R16N = "selected"
+                    }else if(designacaoProj == "R16-A"){
+                        R16A = "selected"
+                    }else if(designacaoProj == "PIS"){
+                        PIS = "selected"
+                    }else if(designacaoProj == "RPQ1"){
+                        RPQ1 = "selected"
+                    }else if(designacaoProj == "CAL8-N"){
+                        CAL8N = "selected"
+                    }else if(designacaoProj == "CAL8-A"){
+                        CAL8A = "selected"
+                    }else if(designacaoProj == "CSL8-N"){
+                        CSL8N = "selected"
+                    }else if(designacaoProj == "CSL8-A"){
+                        CSL8A = "selected"
+                    }else if(designacaoProj == "CSL16-N"){
+                        CSL16N = "selected"
+                    }else if(designacaoProj == "CSL16-A"){
+                        CSL16A = "selected"
+                    }else if(designacaoProj == "GI"){
+                        GI = "selected"
+                    }
+                     %>
+
+                    <section>
+                        <label class="label">Designação Projeto-Padrão da NBR 12.721 mais semelhante ao imóvel:</label>
+                        <label class="select">
+                            <select name="designacaoProj" id="designacaoProj">
+                                <option value=""></option>
+                                <option value="R1-B" <%=R1B%>>R1-B</option>
+                                <option value="R1-N" <%=R1N%>>R1-N</option>
+                                <option value="R1-A" <%=R1A%>>R1-A</option>
+                                <option value="PP4-B" <%=PP4B%>>PP4-B</option>
+                                <option value="PP4-N" <%=PP4N%>>PP4-N</option>
+                                <option value="R8-B" <%=R8B%>>R8-B</option>
+                                <option value="R8-N" <%=R8N%>>R8-N</option>
+                                <option value="R8-A" <%=R8A%>>R8-A</option>
+                                <option value="R16-N" <%=R16N%>>R16-N</option>
+                                <option value="R16-A" <%=R16A%>>R16-A</option>
+                                <option value="PIS" <%=PIS%>>PIS</option>
+                                <option value="RPQ1" <%=RPQ1%>>RPQ1</option>
+                                <option value="CAL8-N" <%=CAL8N%>>CAL8-N</option>
+                                <option value="CAL8-A" <%=CAL8A%>>CAL8-A</option>
+                                <option value="CSL8-N" <%=CSL8N%>>CSL8-N</option>
+                                <option value="CSL8-A" <%=CSL8A%>>CSL8-A</option>
+                                <option value="CSL16-N" <%=CSL16N%>>CSL16-N</option>
+                                <option value="CSL16-A" <%=CSL16A%>>CSL16-A</option>
+                                <option value="GI" <%=GI%>>GI</option>
+
+                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+
+                    <label class="label">Quantidade de Unidades Autônomas:</label>
+                    <label class="input">
+                        <input type="text" name="quantidadeProj" id="quantidadeProj" value="<%=quantidadeProj%>">
+                    </label>
+
+                    <label class="label">Padrão de Acabamento:</label>
+                    <label class="input">
+                        <input type="text" name="padraoProj" id="padraoProj" value="<%=padraoProj%>">
+                    </label>
+
+                    <label class="label">Número de Pavimentos:</label>
+                    <label class="input">
+                        <input type="text" name="pavimentosProj" id="pavimentosProj" value="<%=pavimentosProj%>">
+                    </label>
+
+                    <label class="label">Vagas de Estacionamento (Unidade Autônoma):</label>
+                    <label class="input">
+                        <input type="text" name="vagasAutonomas" id="vagasAutonomas" value="<%=vagasAutonomas%>">
+                    </label>
+
+                    <label class="label">Vagas de Estacionamento (Acessório de Unidade Autônoma):</label>
+                    <label class="input">
+                        <input type="text" name="vagasAcessorio" id="vagasAcessorio" value="<%=vagasAcessorio%>">
+                    </label>
+
+                    <label class="label">Vagas de Estacionamento (Áreas de Uso Comum):</label>
+                    <label class="input">
+                        <input type="text" name="vagasComum" id="vagasComum" value="<%=vagasComum%>">
+                    </label>
+
+                    <label class="label">Área do Lote/Terreno:</label>
+                    <label class="input">
+                        <input type="text" name="areaProj" id="areaProj" value="<%=areaProj%>">
+                    </label>
+
+                    <label class="label">Data de Aprovação do Projeto Arquitetônico:</label>
+                    <label class="input">
+                        <input type="text" name="dataAprov" id="dataAprov" value="<%=dataAprov%>">
+                    </label>
+
+                    <label class="label">Número do Alvará de Aprovação do Projeto Arquitetônico:</label>
+                    <label class="input">
+                        <input type="text" name="numeroAlvara" id="numeroAlvara" value="<%=numeroAlvara%>">
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <header>CÁLCULO DAS ÁREAS NOS PAVIMENTOS E DAS ÁREAS GLOBAIS:</header>
+                <div class="row">
+                    <div  class="col-sm-12" style="text-align: center">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <td rowspan="3">Nome da Área</td>
+                                <td rowspan="3">Pavimento</td>
+
+
+                                <td colspan="6">Área de Divisão não Proporcional</td>
+                                <td colspan="3">Área de Divisão Proporcional</td>
+                                <td rowspan="3">Qtd Pavs</td>
+                                <td rowspan="3">Qtd Unid</td>
+                                <td rowspan="3">Unidade Autônoma?</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Área Privativa</td>
+                                <td colspan="3">Área de Uso Comum</td>
+                                <td colspan="3">Área de Uso Comum</td>
+                            </tr>
+                            <tr>
+                                <td>Coberta Padrão</td>
+                                <td>Padrão Diferente ou Descoberta</td>
+                                <td>Coef Prop</td>
+                                <td>Coberta Padrão</td>
+                                <td>Padrão Diferente ou Descoberta</td>
+                                <td>Coef Prop</td>
+                                <td>Coberta Padrão</td>
+                                <td>Padrão Diferente ou Descoberta</td>
+                                <td>Coef Prop</td>
+                            </tr>
+
+                            </thead>
+                            <tbody id="tabelaPav">
+                            <% for(var i=0; i<pav.length; i++) {
+                                var checksim = ""
+                                var checknao = ""
+                                if(pav[i].unidAut == "sim"){
+                                    checksim = "checked"
+                                } else if(pav[i].unidAut == "não"){
+                                    checknao = "checked"
+
+                                }
+
+                            %>
+                                <tr><td><input class="input" type="text" name="pav[<%=i%>][nomeArea]" value="<%=pav[i].nomeArea%>" required></td>
+                                    <td><input class="input" type="text"  maxlength="23" name="pav[<%=i%>][pavimento]" value="<%=pav[i].pavimento%>" required></td>
+                                    <td><input class="input" type="number" step="0.0001" name="pav[<%=i%>][nPropPrivCob]" value="<%=pav[i].nPropPrivCob%>"></td>
+                                    <td><input class="input" type="number" step="0.0001" name="pav[<%=i%>][nPropPrivDif]" value="<%=pav[i].nPropPrivDif%>"></td>
+                                    <td><input class="input" id="small" type="number" step="0.0001" name="pav[<%=i%>][coefNPropPrivDif]" value="<%=pav[i].coefNPropPrivDif%>"></td>
+                                    <td><input class="input" type="number" step="0.0001" name="pav[<%=i%>][nPropComCob]" value="<%=pav[i].nPropComCob%>"></td>
+                                    <td><input class="input" type="number" step="0.0001" name="pav[<%=i%>][nPropComDif]" value="<%=pav[i].nPropComDif%>"></td>
+                                    <td><input class="input" id="small" type="number" step="0.0001" name="pav[<%=i%>][coefNPropComDif]" value="<%=pav[i].coefNPropComDif%>"></td>
+                                    <td><input class="input" type="number" step="0.0001" name="pav[<%=i%>][propComCob]" value="<%=pav[i].propComCob%>"></td>
+                                    <td><input class="input" type="number" step="0.0001" name="pav[<%=i%>][propComDif]" value="<%=pav[i].propComDif%>"></td>
+                                    <td><input class="input" id="small" type="number" step="0.0001" name="pav[<%=i%>][coefPropComDif]" value="<%=pav[i].coefPropComDif%>"></td>
+                                    <td><input class="input" id="small" type="number" name="pav[<%=i%>][qtdPav]" value="<%=pav[i].qtdPav%>" required></td>
+                                    <td><input class="input" id="small" type="number" name="pav[<%=i%>][qtdUni]" value="<%=pav[i].qtdUni%>" required></td>
+                                    <td><input type="radio" name="pav[<%=i%>][unidAut]" value="sim" <%=checksim%>>sim<br><input type="radio" name="pav[<%=i%>][unidAut]" value="não" <%=checknao%>>não</td>
+                                </tr>
+                            <%} %>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div  class="col-sm-12" style="text-align: center">
+                        <button class="btn-u" type="button" id="btnAdd"><i class="fa fa-plus"></i></button>
+                        <button class="btn-u" type="button" id="btnRemove"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <footer>
+                <button type="submit" class="btn-u">Gravar Dados</button>
+                <a href="/nbr12721tela"><button type="button" class="btn-u btn-u-default">Voltar</button></a>
+            </footer>
+        </form>
+
+
+
+
+        <!-- JS Global Compulsory -->
+        <script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+        <!-- JS Page Level -->
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/pages/editformulario.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                App.init();
+                EditFormulario.initMessage();
+
+            })
+        </script>
+        <script type="text/javascript">
+            var tabela = $("#tabelaPav");
+            var i = $("#tabelaPav tr").size() + 1;
+            $("#btnAdd").click(function(){
+                tabela.append('' +
+                        '<tr>+' +
+                        '<td><input class="input" type="text" name="pav['+i+'][nomeArea]" required></td>' +
+                        '<td><input class="input" type="text" name="pav['+i+'][pavimento]" required></td>' +
+                        '<td><input class="input" type="number" step="0.0001" name="pav['+i+'][nPropPrivCob]"></td>' +
+                        '<td><input class="input" type="number" step="0.0001" name="pav['+i+'][nPropPrivDif]"></td>' +
+                        '<td><input class="input" id="small" type="number" step="0.0001" name="pav['+i+'][coefNPropPrivDif]"></td>' +
+                        '<td><input class="input" type="number" step="0.0001" name="pav['+i+'][nPropComCob]"></td>' +
+                        '<td><input class="input" type="number" step="0.0001" name="pav['+i+'][nPropComDif]"></td>' +
+                        '<td><input class="input" id="small" type="number" step="0.0001" name="pav['+i+'][coefNPropComDif]"></td>' +
+                        '<td><input class="input" type="number" step="0.0001" name="pav['+i+'][propComCob]"></td>' +
+                        '<td><input class="input" type="number" step="0.0001" name="pav['+i+'][propComDif]"></td>' +
+                        '<td><input class="input" id="small" type="number" step="0.0001" name="pav['+i+'][coefPropComDif]"></td>' +
+                        '<td><input class="input" id="small" type="number" step="0.0001" name="pav['+i+'][qtdPav]" required></td>' +
+                        '<td><input class="input" id="small" type="number" step="0.0001" name="pav['+i+'][qtdUni]" required></td>' +
+                        '<td><input type="radio" name="pav['+i+'][unidAut]" value="sim">sim<br><input type="radio" name="pav['+i+'][unidAut]" value="não" checked>não</td>' +
+                        '</tr>');
+                i++;
+                return false;
+            });
+            $("#btnRemove").click(function(){
+                if(i > 2){
+                    $("#tabelaPav tr:last").remove()
+                    i--
+                }
+                return false
+            })
+
+        </script>
+    </div>
+</div>
+</div>
+</body>
+</html>

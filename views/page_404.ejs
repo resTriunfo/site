@@ -1,0 +1,39 @@
+<%- contentFor('css') %>
+<link rel="stylesheet" href="/stylesheets/pages/page_404_error.css">
+
+<%- contentFor('breadcrumbs') %>
+
+<h1 class="pull-left">Erro 404</h1>
+<ul class="pull-right breadcrumb">
+    <li><a href="/index">Home</a></li>
+    <li class="active">Erro 404</li>
+</ul>
+
+<%- contentFor('contentpart') %>
+
+
+<!--=== Content Part ===-->
+<div class="container content">
+    <!--Error Block-->
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="error-v1">
+                <span class="error-v1-title">404</span>
+                <span>Houve um erro!</span>
+
+                <p>A página solicitada não foi encontrada. Verifique se o endereço foi digitado corretamente, ou se a
+                    página foi retirada do ar.</p>
+                <a class="btn-u btn-bordered" href="index.ejs">Voltar</a>
+            </div>
+        </div>
+    </div>
+    <!--End Error Block-->
+</div>
+<!--=== End Content Part ===-->
+
+<%- contentFor('javascript') %>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+    });
+</script>

@@ -1,0 +1,268 @@
+<%- contentFor('css') %>
+<link rel="stylesheet" href="/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css">
+
+<%- contentFor('breadcrumbs') %>
+
+<h1 class="pull-left">Área Restrita</h1>
+<ul class="pull-right breadcrumb">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/restritoadm">Área Restrita</a></li>
+    <li class="active">Ferramentas</li>
+</ul>
+
+<%- contentFor('contentpart') %>
+
+<h1>O valor da sua documentação será de:</h1>
+<br>
+<br>
+<%
+    var taxaCef = 600
+    var assessoria = 0
+    var ufg = 2.6512
+    var limiteGru = 60000*ufg
+    var valorTotal = parseFloat(valorEntrada) + parseFloat(valorFinanciado)
+
+ function valReg(valor){
+    if(valor > 0 && valor <= 1275){
+        return 139.83
+    }
+     if(valor > 1275 && valor <= 3186){
+         return 224.39
+     }
+     if(valor > 3186 && valor <= 5311){
+         return 402.55
+     }
+     if(valor > 5311 && valor <= 10625){
+         return 597.29
+     }
+     if(valor > 10625 && valor <= 21250){
+         return 726.16
+     }
+     if(valor > 21250 && valor <= 63750){
+         return 809.82
+     }
+     if(valor > 63750 && valor <= 106250){
+         return 1033.62
+     }
+     if(valor > 106250 && valor <= 127500){
+         return 1256.96
+     }
+     if(valor > 127500 && valor <= 148750){
+         return 1368.42
+     }
+     if(valor > 148750 && valor <= 170000){
+         return 1480.50
+     }
+     if(valor > 170000 && valor <= 191250){
+         return 1560.74
+     }
+     if(valor > 191250 && valor <= 212500){
+         return 1601.44
+     }
+     if(valor > 212500 && valor <= 425000){
+         return 1785.60
+     }
+     if(valor > 425000 && valor <= 637500){
+         return 2091.12
+     }
+     if(valor > 637500 && valor <= 850000){
+         return 2407.39
+     }
+     if(valor > 850000 && valor <= 1062500){
+         return 2723.68
+     }
+     if(valor > 1062500 && valor <= 1275000){
+         return 2887.20
+     }
+     if(valor > 1275000 && valor <= 2125000){
+         return 3704.79
+     }
+     if(valor > 2125000 && valor <= 3187500){
+         return 5176.46
+     }
+     if(valor > 3187500 && valor <= 4250000){
+         return 6811.65
+     }
+     if(valor > 4250000 && valor <= 5312500){
+         return 8446.84
+     }
+     if(valor > 5312500 && valor <= 6375000){
+         return 10082.02
+     }
+     if(valor > 6375000 && valor <= 7437500){
+         return 11717.21
+     }
+     if(valor > 7437500 && valor <= 8500000){
+         return 13352.40
+     }
+     if(valor > 8500000 && valor <= 9562500){
+         return 14987.59
+     }
+     if(valor > 9562500 && valor <= 10625000){
+         return 16622.77
+     }
+     if(valor > 10625000 && valor <= 12750000){
+         return 19075.56
+     }
+     if(valor > 12750000 && valor <= 14875000){
+         return 22345.93
+     }
+     if(valor > 14875000 && valor <= 17000000){
+         return 25616.31
+     }
+     if(valor > 17000000 && valor <= 19125000){
+         return 28886.68
+     }
+     if(valor > 19125000 && valor <= 21250000){
+         return 32157.06
+     }
+     if(valor > 21250000 && valor <= 23375000){
+         return 35427.43
+     }
+     if(valor > 23375000 && valor <= 25500000){
+         return 38697.81
+     }
+     if(valor > 25500000 && valor <= 27625000){
+         return 41968.18
+     }
+     if(valor > 27625000 && valor <= 29750000){
+         return 45238.56
+     }
+     if(valor > 29750000 && valor <= 31875000){
+         return 48508.93
+     }
+     if(valor > 31875000 && valor <= 36125000){
+         return 53414.49
+     }
+     if(valor > 36125000 && valor <= 40375000){
+         return 59955.24
+     }
+     if(valor > 40375000 && valor <= 44625000){
+         return 66495.99
+     }
+     if(valor > 44625000 && valor <= 48875000){
+         return 73036.74
+     }
+     if(valor > 48875000 && valor <= 53125000){
+         return 79.577.49
+     }
+     if(valor > 53125000 && valor <= 57375000){
+         return 86118.24
+     }
+     if(valor > 57375000 && valor <= 61625000){
+         return 92658.99
+     }
+     if(valor > 61625000 && valor <= 65875000){
+         return 99199.74
+     }
+     if(valor > 65875000 && valor <= 70125000){
+         return 105740.49
+     }
+     if(valor > 70125000 && valor <= 74375000){
+         return 112281.24
+     }
+     if(valor > 74375000 && valor <= 78625000){
+         return 118821.99
+     }
+     if(valor > 78625000){
+         return 125743.75
+     }
+ }
+
+var regFracao = valReg(fite)
+var regFinanc = valReg(valorFinanciado)
+var habitese = valorTotal-fite
+var regHabitese = valReg(habitese)
+var regTotal = valReg(valorTotal)
+
+
+
+ if(municipio == "cotia"){
+     var a = valorEntrada*0.03
+     var b = valorFinanciado*0.005
+     var ITBI = a+b
+ }
+ if(municipio == "guarulhos"){
+     if(valorTotal > 750000){
+         var ITBI = valorTotal*0.02
+     }
+     if(valorTotal<= 750000){
+         if(valorFinanciado<=limiteGru){
+             var ITBI = (0.02*valorEntrada)+(0.005*valorFinanciado)
+         }
+         if(valorFinanciado>limiteGru){
+             var ITBI = (0.005*limiteGru)+(0.02*(valorTotal-limiteGru))
+         }
+     }
+ }
+
+if(planta == "true"){
+    if(origem == "fgts"){
+        var registro = regFracao*0.5
+        var registroHabitese = regHabitese*0.5
+        var registroFinanciamento = regFinanc*0.5
+    }
+    if(origem == "poupanca"){
+        if(primeiroImovel == "true"){
+            var registro = regFracao*0.5
+            var registroHabitese = regHabitese*0.5
+            var registroFinanciamento = regFinanc*0.5
+        }
+        if(primeiroImovel == "false"){
+            var registro = regFracao
+            var registroHabitese = regHabitese
+            var registroFinanciamento = regFinanc
+        }
+    }
+
+}else{
+    if(origem == "fgts"){
+        var registro = regTotal*0.5
+        var registroFinanciamento = regFinanc*0.5
+        var registroHabitese = 0
+
+    }
+    if(origem == "poupanca"){
+        if(primeiroImovel == "true"){
+            var registro = regTotal*0.5
+            var registroFinanciamento = regFinanc*0.5
+            var registroHabitese = 0
+
+        }
+        if(primeiroImovel == "false"){
+            var registro = regTotal
+            var registroFinanciamento = regFinanc
+            var registroHabitese = 0
+
+        }
+    }
+}
+    var docTotal = parseFloat(registro) + parseFloat(registroFinanciamento) + parseFloat(registroHabitese) + parseFloat(ITBI) + parseFloat(taxaCef) + parseFloat(assessoria)
+
+
+
+
+
+  %>
+
+<p><strong>Taxas da Caixa Econômica:</strong> R$ <%=taxaCef.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></p>
+<p><strong>ITBI:</strong> R$ <%=ITBI.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></p>
+<p><strong>Registro:</strong> R$ <%=registro.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></p>
+<p><strong>Registro Financiamento:</strong> R$ <%=registroFinanciamento.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></p>
+<p><strong>Registro Habite-se:</strong> R$ <%=registroHabitese.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></p>
+<p><strong>Assessoria:</strong> R$ <%=assessoria.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></p>
+
+
+<br>
+
+<h3>TOTAL: <%=docTotal.toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(',', '#').replace('.', ',').replace('#', '.')%></h3>
+
+<br>
+<br>
+<a href="/calculodoc"><button type="button" class="btn-u btn-u-default">Voltar</button></a>
+
+
+
+
+<%- contentFor('javascript') %>
+

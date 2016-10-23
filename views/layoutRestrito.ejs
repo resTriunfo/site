@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title><%=titulo%></title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de empreendimentos do site da Construtora e Incorporadora Maschio Shin. Empreendimentos residenciais Minha Casa Minha Vida. Apartamentos em Cotia Itaquera.">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->
+    <%-css%>
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="/stylesheets/theme-colors/blue.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <!--=== Header ===-->
+    <div class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <!-- Topbar Navigation -->
+                <ul class="loginbar pull-right">
+                    <li>
+                        <i class="fa fa-globe"></i>
+                        <a>Idiomas</a>
+                        <ul class="Idiomas">
+                            <li class="active">
+                                <a href="#">Português <i class="fa fa-check"></i></a>
+                            </li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Español</a></li>
+                            <!--<li><a href="#">German</a></li>-->
+                        </ul>
+                    </li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="/faq">Ajuda</a></li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+                <!-- End Topbar Navigation -->
+            </div>
+        </div>
+        <!-- End Topbar -->
+
+        <!-- Navbar -->
+        <div class="navbar navbar-default mega-menu" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index">
+                        <img id="logo-header" src="/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Home -->
+                        <li class="active">
+                            <a href="/index" class="" data-toggle="">
+                                Home
+                            </a>
+
+                        </li>
+                        <!-- End Home -->
+
+                        <!-- Empreendimentos -->
+                        <li class="">
+                            <a href="/empreendimentos" class="" data-toggle="">
+                                Empreendimentos
+                            </a>
+
+                        </li>
+                        <!-- Empreendimentos -->
+
+                        <!-- Pages -->
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                Serviços
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <!-- Quadros NBR 12.721 -->
+                                <li class="dropdown-submenu">
+                                <li><a href="/nbr12721">Quadros NBR 12.721</a></li>
+                                <!-- Quadros NBR 12.721 -->
+
+                                <!-- End About Pages -->
+                            </ul>
+                        </li>
+                        <!-- End Pages -->
+
+
+                        <!-- Contato -->
+                        <li class="">
+                            <a href="/contato" class="" data-toggle="">
+                                Contato
+                            </a>
+
+                        </li>
+
+
+                        <!-- Search Block -->
+                        <li>
+                            <i class="search fa fa-search search-btn"></i>
+                            <div class="search-open">
+                                <div class="input-group animated fadeInDown">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn-u" type="button">Go</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- End Search Block -->
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>
+        </div>
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header ===-->
+
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <%-breadcrumbs%>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+    <div class="tab-pane fade in active" id="alert-1">
+        <div class="margin-bottom-15"></div>
+        <div class="" id="message"><%=message%></div>
+    </div>
+
+    <!--=== Profile ===-->
+    <div class="profile container content">
+        <div class="row">
+            <!--Left Sidebar-->
+            <div class="col-md-3 md-margin-bottom-40">
+                <img class="img-responsive profile-img margin-bottom-20" src="/img/adm/<%=username%>.jpg" alt="">
+
+                <ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
+                    <li class="list-group-item <%=restritoPrincipal%>">
+                        <a href="/restritoadm"><i class="fa fa-bar-chart-o"></i> Principal</a>
+                    </li>
+                    <li class="list-group-item <%=restritoPerfil%>">
+                        <a href="/restritoperfil"><i class="fa fa-user"></i> Perfil</a>
+                    </li>
+                    <li class="list-group-item <%=restritoUsuarios%>">
+                        <a href="/restritousuarios"><i class="fa fa-group"></i> Usuários</a>
+                    </li>
+                    <li class="list-group-item <%=restritoFerramentas%>">
+                        <a href="/restritoferramentas"><i class="fa fa-cubes"></i> Ferramentas</a>
+                    </li>
+                </ul>
+            </div>
+<%-contentpart%>
+
+        </div>
+    </div><!--/end row-->
+</div><!--/container-->
+<!--=== End Profile ===-->
+
+
+
+<!--=== Footer Version 1 ===-->
+<div class="footer-v1">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <a href="/index"><img id="logo-footer" class="footer-logo" src="/img/logo2.png" alt=""></a>
+                    <p>Uma construtora jovem que está chegando para mudar os conceitos no mercado imobiliário brasileiro</p>
+                    <p>Eficiência e modernidade aliadas à tradição.</p>
+                </div><!--/col-md-3-->
+                <!-- End About -->
+
+
+
+                <!-- Link List -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div class="headline"><h2>Links Úteis</h2></div>
+                    <ul class="list-unstyled link-list">
+                        <li><a href="/index">Home</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="/empreendimentos">Empreendimentos</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="/contato">Contato</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div><!--/col-md-3-->
+                <!-- End Link List -->
+
+                <!-- Address -->
+                <div class="col-md-4 map-img md-margin-bottom-40">
+                    <div class="headline"><h2>Fale Conosco</h2></div>
+                    <address class="md-margin-bottom-40">
+                        Av. Santo Amaro, 3330, cj 72 - Brooklin Paulista <br />
+                        São Paulo, SP - CEP: 04556-300<br />
+                        Telefone: (11) 3294-7013 <br />
+                        Celular: (11) 9-4746-1988 <br />
+                        Email: <a href="mailto:sinuhe@mshin.com.br" class="">sinuhe@mshin.com.br</a>
+                    </address>
+                </div>
+                <!-- End Address -->
+            </div>
+        </div>
+    </div><!--/footer-->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+
+
+                <!-- Social Links -->
+                <div class="col-md-6">
+                    <ul class="footer-socials list-inline">
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                <i class="fa fa-skype"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- End Social Links -->
+            </div>
+        </div>
+    </div><!--/copyright-->
+</div>
+<!--=== End Footer Version 1 ===-->
+
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/plugins/back-to-top.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="/js/functions.js"></script>
+<%-javascript%>
+
+</body>
+</html>

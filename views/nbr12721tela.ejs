@@ -1,0 +1,77 @@
+<%- contentFor('css') %>
+
+<%- contentFor('breadcrumbs') %>
+
+            <h1 class="pull-left">NBR 12.721</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/restritoadm">Área Restrita</a></li>
+                <li><a href="/restritoferramentas">Ferramentas</a></li>
+                <li class="active">NBR 12.721</li>
+            </ul>
+
+<%- contentFor('contentpart') %>
+
+            <div class="col-md-9">
+        
+                <div class="panel panel-blue margin-bottom-40">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-cubes"></i> Obras Gravadas</h3>
+                    </div>
+
+                    <div class="panel-body" id="userList">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Empreendimento</th>
+                                <th><a href="/formularionbr12721"><button class="btn btn-success btn-xs" type="submit"><i class="fa fa-plus"></i> Novo</button></a></th>
+                                <th></th>
+                                <th>Imprimir Quadros</th>
+
+
+
+                            </tr>
+
+
+                            </thead>
+                            <tbody id="tabelaobras">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+<%- contentFor('javascript') %>
+
+<script type="text/javascript" src="/js/pages/nbr12721tela.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        CadastroObras.populateTable();
+        CadastroObras.initMessage();
+        $('#tabelaobras').on('click', 'td a.linkdeleteuser', deleteUser);
+
+        function deleteUser(event) {
+            event.preventDefault();
+            var confirmation = confirm('Tem Certeza que Deseja Deletar Esta Obra?');
+            if (confirmation === true) {
+                $.ajax({
+                    type: 'DELETE',
+                    url: '/deleteobra/' + $(this).attr('rel')
+                }).done(function( response ) {
+                    if (response.msg === '') {
+                    }
+                    else {
+                        console.log('Error: ' + response.msg);
+                    }
+                    CadastroObras.populateTable();
+                });
+            }
+            else {
+                return false;
+            }
+        }
+
+    });
+</script>

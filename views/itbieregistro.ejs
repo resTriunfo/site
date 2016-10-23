@@ -1,0 +1,112 @@
+<%- contentFor('css') %>
+
+<link rel="stylesheet" href="/stylesheets/plugins/flexslider.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/stylesheets/plugins/plugins.css" type="text/css" media="screen">
+
+
+<%- contentFor('breadcrumbs') %>
+
+<h1 class="pull-left">Cálculo do ITBI e Registro</h1>
+<ul class="pull-right breadcrumb">
+    <li><a href="/index">Home</a></li>
+
+    <li class="active">Cálculo do ITBI e Registro</li>
+</ul>
+
+<%- contentFor('contentpart') %>
+
+<!--=== Content Part ===-->
+<div class="container content">
+    <!--=== About Me Img ===-->
+    <div class="container content">
+        <div class="row about-me margin-bottom-40">
+
+            <div class="col-md-9">
+                <div class="overflow-h">
+                    <div class="pull-left">
+                        <h2>ITBI</h2>
+                        <span>Imposto sobre Transmissão de Bens Imóveis</span>
+                    </div>
+                </div>
+                <p>O ITBI é um imposto municipal, logo os valores e a forma de cáculo variam conforme cada município. Colocaremos aqui
+                a forma de cáculo para os municípios onde atuamos. Se quiser informações sobre algum município em específico que não
+                esteja aqui, favor solicitar através do nosso formulário de contato <a href="/contato">aqui</a></p>
+                <br>
+
+                <div class="overflow-h">
+                    <div class="pull-left">
+                        <span>Guarulhos</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li><i class="color-green fa fa-check"></i> Para imóveis fora do SFH (acima de R$ 750.000,00): 2% sobre o valor de compra e venda
+                    ou sobre o valor venal do imóvel (aquele que for maior)</li>
+                    <br>
+                    <li><i class="color-green fa fa-check"></i> Para imóveis dentro do SFH: 2% sobre o valor à vista e 0,5% sobre o valor
+                        financiado (o desconto para o valor financiado se limita a 60.000 UFG - R$ 159.072,00. Caso o financiamento exceda este valor
+                    paga-se 0,5% sobre R$ 159.072,00 e 2% sobre a diferença)</li>
+                </ul>
+
+                <br>
+                <div class="overflow-h">
+                    <div class="pull-left">
+                        <span>Cotia</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li><i class="color-green fa fa-check"></i> 3% sobre o valor à vista e 0,5% sobre o valor financiado.</li>
+                </ul>
+                <br>
+                <br>
+                <br>
+
+                <div class="overflow-h">
+                    <div class="pull-left">
+                        <h2>Registro de Imóveis</h2>
+                        <span>Emolumentos pagos ao cartório de registro de imóveis</span>
+                    </div>
+                </div>
+                <p>Os emolumentos pagos ao cartório de registro de imóveis são tabelados pela ARISP (Associação dos Registradores
+                Imobiliários de São Paulo. As tabelas podem ser encontradas <a href="https://www.registradores.org.br/Servicos/frmTabelaCustas.aspx">aqui</a></p>
+
+                <br>
+                <div class="overflow-h">
+                    <div class="pull-left">
+                        <span>Registro</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li><i class="color-green fa fa-check"></i> O registro do contrato será cobrado de acordo com a tabela 1 "Registro com Valor
+                    Declarado". A base de cáculo será o valor de compra e venda do imóvel, e no caso de imóvel na planta o valor da fração
+                    ideal do terreno.</li>
+                    <br>
+                    <li><i class="color-green fa fa-check"></i> O registro da alienação fiduciária em caso de financiamento será cobrado conforme
+                    tabela 1 "Registro com Valor Declarado" e a base de cálculo será o valor financiado.</li>
+                    <br>
+                    <li><i class="color-green fa fa-check"></i> Em caso de imóvel na planta, será cobrada a diferença do registro no momento
+                    da expedição do habite-se. O registro será cobrado conforme tabela 1 "Registro com Valor Declarado" e a base de cálculo
+                        será a diferença entre o valor da fração ideal do terreno e o valor de compra e venda.</li>
+                   <br>
+                    <li><i class="color-green fa fa-check"></i> Se houver averbação de hipoteca ou alienação fiduciária como garantia de operação
+                        financeira para realização da obra, será cobrado o valor da tabela 2 "Averbação com Valor Declarado" e a base de
+                        cálculo será o valor da garantia. Cada unidade responderá proporcionalmente pela fração do valor da averbação.</li>
+                    <br>
+                    <li><i class="color-green fa fa-check"></i> No caso de financiamento com recursos provenientes do FGTS existe desconto de 50% sobre
+                        os valores de registro. Para financiamento com recursos originários da poupança o desconto de 50% se aplica somente acompanhado de
+                    declaração de 1ᵃ compra de imóvel financiado pelo SFH.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--=== End About Me Img ===-->
+</div>
+
+
+<%- contentFor('javascript') %>
+<script type="text/javascript" src="/js/plugins/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();
+    });
+</script>
