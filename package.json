@@ -1,7 +1,7 @@
 {
-  "name": "MShin",
+  "name": "Residencial-Triunfo",
   "version": "1.0.0",
-  "description": "Site da Construtora Maschio Shin",
+  "description": "Site do Empreendimento Residencial Triunfo",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -11,12 +11,12 @@
   "author": {
     "name": "Sinuhe Shin",
     "email": "sinuhe@mshin.com.br",
-    "url": "http://www.mshin.com.br"
+    "url": "http://www.residencialtriunfo.com.br"
   },
-  "homepage": "http://www.mshin.com.br",
+  "homepage": "http://www.residencialtriunfo.com.br",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/resTriunfo/site.git"
   },
 
   "engines": {
